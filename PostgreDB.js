@@ -79,7 +79,6 @@ export default class DatabasePostgreSQL {
 
   async deleteUser(userId) {
     try {
-      console.log(userId);
       await sql`DELETE FROM users WHERE id = ${userId}`
 
       return {
