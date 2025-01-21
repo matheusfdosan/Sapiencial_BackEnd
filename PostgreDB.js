@@ -76,4 +76,22 @@ export default class DatabasePostgreSQL {
       }
     }
   }
+
+  async deleteUser(userId) {
+    try {
+      console.log(userId);
+      await sql`DELETE FROM users WHERE id = ${userId}`
+
+      return {
+        sucess: true,
+        message: "User Deleted Successfully",
+      }
+    } catch (err) {
+      console.log("Error to delete user: " + err)
+      return {
+        sucess: false,
+        message: "Error to Delete User",
+      }
+    }
+  }
 }

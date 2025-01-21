@@ -7,7 +7,7 @@
 - [x] Login
 - [x] Ver Perfil Usuário
 - [x] Atualizar Informações de Perfil
-- [] Deletar Conta
+- [x] Deletar Conta
 
 ## Cursos
 

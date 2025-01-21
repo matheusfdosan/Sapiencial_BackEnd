@@ -13,6 +13,9 @@ server.register(checkingLogin)
 import updateUser from "./routes/users/updateUser.js"
 server.register(updateUser)
 
+import deleteUser from "./routes/users/deleteUser.js"
+server.register(deleteUser)
+
 server.listen({ port: process.env.PORT ?? 1111, host: "0.0.0.0" }).then(() => {
-  console.log(`Server Running on http://localhost:${process.env.PORT ?? 1111}/`);
+  console.log(`Server Running on http://localhost:${process.env.PORT ?? 1111}/`)
 })
