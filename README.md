@@ -6,7 +6,7 @@
   - [x] Tipo de Usuário (Admin, Professor, Aluno)
 - [x] Login
 - [x] Ver Perfil Usuário
-- [] Atualizar Informações de Perfil
+- [x] Atualizar Informações de Perfil
 - [] Deletar Conta
 
 ## Cursos

@@ -39,8 +39,9 @@ export default class DatabasePostgreSQL {
 
   async checkingLogin(email, password) {
     try {
-      console.log(email,password);
-      const response = await sql`SELECT id FROM users WHERE email = ${email} AND password = ${password}`
+      console.log(email, password)
+      const response =
+        await sql`SELECT id FROM users WHERE email = ${email} AND password = ${password}`
 
       console.log("Login made by: " + email)
 
@@ -54,6 +55,24 @@ export default class DatabasePostgreSQL {
       return {
         access: false,
         message: "Error login!",
+      }
+    }
+  }
+
+  async updateUser(userId, updatedInfo) {
+    try {
+      const { username, type, courses, country } = updatedInfo
+      await sql`UPDATE users SET username = ${username}, type = ${type}, courses = ${courses}, country = ${country} WHERE id = ${userId}`
+
+      return {
+        sucess: true,
+        message: "Updates made successfully",
+      }
+    } catch (err) {
+      console.log("Error updates: " + err)
+      return {
+        sucess: false,
+        message: "Error updates",
       }
     }
   }
