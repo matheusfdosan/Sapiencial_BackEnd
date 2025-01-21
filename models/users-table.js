@@ -7,9 +7,9 @@ sql`CREATE TABLE users (
   password    TEXT NOT NULL,
   cpf         VARCHAR(14) UNIQUE NOT NULL,
   type        TEXT NOT NULL,
-  CURSES      TEXT NOT NULL,
-  country     TEXT ,
-  created_at TIMESTAMP DEFAULT NOW()
+  courses     TEXT NOT NULL,
+  country     TEXT,
+  created_at  TIMESTAMP DEFAULT NOW()
 );`
   .then(() => {
     console.log("Table Users Created!")

@@ -5,5 +5,5 @@ const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env
 const URL = `postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?sslmode=require
 `
 
-export default 
 const sql = postgres(URL)
+export default sql
