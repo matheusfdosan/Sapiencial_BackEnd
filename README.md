@@ -5,7 +5,7 @@
 - [x] Criar Perfil
   - [x] Tipo de Usuário (Admin, Professor, Aluno)
 - [x] Login
-- [] Ver Perfil Usuário
+- [x] Ver Perfil Usuário
 - [] Atualizar Informações de Perfil
 - [] Deletar Conta
 
