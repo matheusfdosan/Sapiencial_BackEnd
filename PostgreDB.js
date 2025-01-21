@@ -4,7 +4,8 @@ import sql from "./db.js"
 export default class DatabasePostgreSQL {
   async newUser(userData) {
     const newId = randomUUID()
-    const { username, email, password, cpf, type, courses, studying, country } = userData
+    const { username, email, password, cpf, type, courses, studying, country } =
+      userData
 
     try {
       await sql`INSERT INTO users (id, username, email, password, cpf, type, studying, courses, country) VALUES (${newId}, ${username}, ${email}, ${password}, ${cpf}, ${type}, ${studying}, ${courses}, ${country});`
@@ -90,6 +91,30 @@ export default class DatabasePostgreSQL {
       return {
         sucess: false,
         message: "Error to Delete User",
+      }
+    }
+  }
+
+  // -------------- Course --------------
+
+  async newCourse(course) {
+    try {
+      const courseId = randomUUID()
+      const { title, description, body, teacher, students, rate, comments } =
+        course
+      await sql`INSERT INTO courses (id, title, description, body, teacher, students, rate, comments) VALUES (${courseId}, ${title}, ${description}, ${body}, ${teacher}, ${students}, ${rate}, ${comments});`
+
+      console.log("New Course Created: " + title)
+
+      return {
+        sucess: true,
+        message: "New Course Created",
+      }
+    } catch (err) {
+      console.log("Error Course:" + err);
+      return {
+        sucess: false,
+        message: "Error Course",
       }
     }
   }
