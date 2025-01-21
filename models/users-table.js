@@ -6,8 +6,9 @@ sql`CREATE TABLE users (
   email       TEXT NOT NULL UNIQUE,
   password    TEXT NOT NULL,
   cpf         VARCHAR(14) UNIQUE NOT NULL,
-  type        TEXT NOT NULL,
+  type        TEXT NOT NULL CHECK (type IN ('student', 'teacher', 'admin')),
   courses     TEXT NOT NULL,
+  studying    TEXT NOT NULL,
   country     TEXT,
   created_at  TIMESTAMP DEFAULT NOW()
 );`

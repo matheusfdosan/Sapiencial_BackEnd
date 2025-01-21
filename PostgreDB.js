@@ -4,10 +4,10 @@ import sql from "./db.js"
 export default class DatabasePostgreSQL {
   async newUser(userData) {
     const newId = randomUUID()
-    const { username, email, password, cpf, type, courses, country } = userData
+    const { username, email, password, cpf, type, courses, studying, country } = userData
 
     try {
-      await sql`INSERT INTO users (id, username, email, password, cpf, type, courses, country) VALUES (${newId}, ${username}, ${email}, ${password}, ${cpf}, ${type}, ${courses}, ${country});`
+      await sql`INSERT INTO users (id, username, email, password, cpf, type, studying, courses, country) VALUES (${newId}, ${username}, ${email}, ${password}, ${cpf}, ${type}, ${studying}, ${courses}, ${country});`
 
       console.log("New account created: " + email, "-", type)
       return {
