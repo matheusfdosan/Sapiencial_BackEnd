@@ -23,4 +23,17 @@ export default class DatabasePostgreSQL {
       }
     }
   }
+
+  async getUser(userId) {
+    try {
+      const response = await sql`SELECT * FROM users WHERE id = ${userId};`
+      return response
+    } catch (err) {
+      console.log("Error to get user data from database: " + err)
+      return {
+        sucess: false,
+        message: "Error to Get User Data",
+      }
+    }
+  }
 }

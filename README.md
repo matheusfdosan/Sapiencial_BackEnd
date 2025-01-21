@@ -1,11 +1,15 @@
-# Usuários
+# Em Construção
+
+## Usuários
+
 - [x] Criar Perfil
   - [x] Tipo de Usuário (Admin, Professor, Aluno)
 - [] Ver Perfil Usuário
 - [] Atualizar Informações de Perfil
 - [] Deletar Conta
 
-# Cursos
+## Cursos
+
 - [] Professor Criam Curso
   - [] Informam Assunto, Duração, Quantidade de Seções, etc.
 - [] Professores e Alunos Podem Ver o Curso
@@ -15,7 +19,8 @@
 - [] Alunos Podem Avaliar Curso
 - [] Alunos Ganham Cerificado ao Concluir Curso
 
-# Adimin
+## Adimin
+
 - [] Acesso ao Dashboard
   - [] Ver Usuários - Tanto Alunos Quanto Professores (CRUD)
   - [] Ver Todos os Cursos (CRUD)
