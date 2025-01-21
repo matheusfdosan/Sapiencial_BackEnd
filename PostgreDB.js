@@ -36,4 +36,25 @@ export default class DatabasePostgreSQL {
       }
     }
   }
+
+  async checkingLogin(email, password) {
+    try {
+      console.log(email,password);
+      const response = await sql`SELECT id FROM users WHERE email = ${email} AND password = ${password}`
+
+      console.log("Login made by: " + email)
+
+      return {
+        access: true,
+        userId: response[0].id,
+        message: "Login successfully!",
+      }
+    } catch (err) {
+      console.log("Error to check login: " + err)
+      return {
+        access: false,
+        message: "Error login!",
+      }
+    }
+  }
 }
