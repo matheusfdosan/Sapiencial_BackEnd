@@ -111,10 +111,26 @@ export default class DatabasePostgreSQL {
         message: "New Course Created",
       }
     } catch (err) {
-      console.log("Error Course:" + err);
+      console.log("Error Course:" + err)
       return {
         sucess: false,
         message: "Error Course",
+      }
+    }
+  }
+
+  async getCourse(id) {
+    try {
+      const response = await sql`SELECT * FROM courses WHERE id = ${id}`
+      return {
+        sucess: true,
+        res: response,
+      }
+    } catch (err) {
+      console.log("Error Get Course:" + err)
+      return {
+        success: false,
+        res: "Error Get Course",
       }
     }
   }
