@@ -13,7 +13,7 @@
 
 - [x] Professor Criam Curso
   - [x] Informam Assunto, Duração, Quantidade de Seções, etc.
-- [ ] Professores e Alunos Podem Ver o Curso
+- [x] Professores e Alunos Podem Ver o Curso
 - [ ] Professor Editam Curso
 - [ ] Professor Deleta Curso
 - [ ] Alunos Podem Ver Curso

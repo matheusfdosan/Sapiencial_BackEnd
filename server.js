@@ -22,6 +22,9 @@ server.register(newCourse)
 import getCourse from "./routes/courses/getCourse.js"
 server.register(getCourse)
 
+import getAllCourses from "./routes/courses/getAllCourses.js"
+server.register(getAllCourses)
+
 server.listen({ port: process.env.PORT ?? 1111, host: "0.0.0.0" }).then(() => {
   console.log(`Server Running on http://localhost:${process.env.PORT ?? 1111}/`)
 })

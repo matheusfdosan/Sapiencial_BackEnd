@@ -134,4 +134,11 @@ export default class DatabasePostgreSQL {
       }
     }
   }
+
+  async getAllCourses(level, offset) {
+    const response = await sql`SELECT * FROM courses LIMIT ${level} OFFSET ${offset}`
+    return response
+  }
+
+  
 }
