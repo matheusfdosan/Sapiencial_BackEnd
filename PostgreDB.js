@@ -136,9 +136,27 @@ export default class DatabasePostgreSQL {
   }
 
   async getAllCourses(level, offset) {
-    const response = await sql`SELECT * FROM courses LIMIT ${level} OFFSET ${offset}`
+    const response =
+      await sql`SELECT * FROM courses LIMIT ${level} OFFSET ${offset}`
     return response
   }
 
-  
+  async editCourse(courseId, updatedCourse) {
+    try {
+      const { title, description, body, teacher, students, rate, comments } =
+        updatedCourse
+
+      await sql`UPDATE courses SET title = ${title}, description = ${description}, body = ${body}, teacher = ${teacher}, students = ${students}, rate = ${rate}, comments = ${comments} WHERE id = ${courseId};`
+      return {
+        success: true,
+        message: "Course updated successfully",
+      }
+    } catch (err) {
+      console.log("Error to Update Course: " + err)
+      return {
+        sucess: false,
+        message: "Error to Update Course",
+      }
+    }
+  }
 }

@@ -14,13 +14,13 @@
 - [x] Professor Criam Curso
   - [x] Informam Assunto, Duração, Quantidade de Seções, etc.
 - [x] Professores e Alunos Podem Ver o Curso
-- [ ] Professor Editam Curso
+- [x] Professor Editam Curso
 - [ ] Professor Deleta Curso
 - [ ] Alunos Podem Ver Curso
 - [ ] Alunos Podem Avaliar Curso
 - [ ] Alunos Ganham Cerificado ao Concluir Curso
 
-## Adimin
+## Admin
 
 - [ ] Acesso ao Dashboard
   - [ ] Ver Usuários - Tanto Alunos Quanto Professores (CRUD)

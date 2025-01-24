@@ -6,6 +6,6 @@ export default async function getAllCourses(server) {
     const level = Number(req.params.level)
 
     const response = await fromDb.getAllCourses(15, 15 * level)
-    return response.map((obj) => obj.title)
+    return response
   })
 }
