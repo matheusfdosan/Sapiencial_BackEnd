@@ -15,10 +15,9 @@
   - [x] Informam Assunto, Duração, Quantidade de Seções, etc.
 - [x] Professores e Alunos Podem Ver o Curso
 - [x] Professor Editam Curso
-- [ ] Professor Deleta Curso
-- [ ] Alunos Podem Ver Curso
-- [ ] Alunos Podem Avaliar Curso
-- [ ] Alunos Ganham Cerificado ao Concluir Curso
+- [x] Professor Deleta Curso
+- [ ] Alunos do Curso Podem Avaliar Curso
+- [ ] Alunos do Curso Ganham Cerificado ao Concluir Curso
 
 ## Admin
 

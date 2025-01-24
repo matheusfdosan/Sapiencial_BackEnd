@@ -159,4 +159,21 @@ export default class DatabasePostgreSQL {
       }
     }
   }
+
+  async deleteCourse(courseId) {
+    try {
+      await sql`DELETE FROM courses WHERE id = ${courseId}`
+   
+      return {
+        sucess: true,
+        message: "Course Deleted Successfully",
+      }
+    } catch (err) {
+      console.log("Error to delete course: " + err)
+      return {
+        sucess: false,
+        message: "Error to Delete Course",
+      }
+    }
+  }
 }
